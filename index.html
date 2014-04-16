@@ -65,6 +65,7 @@ body,
 <div id="map"></div>
 
 <script type="text/javascript" src="groceries.js"></script>
+<script type="text/javascript" src="stl.js"></script>
 
 <script type="text/javascript">
 
@@ -98,6 +99,16 @@ function popUp(e) {
 	var layer = e.target;
 	layer.bindPopup("<h1>" + layer.feature.properties.grocery_storeys + "</h1><p>" + layer.feature.properties.field_2 + "</p>");
 }
+
+L.geoJson(stl, {
+	style: {
+		weight: 1,
+		color: "#eee",
+		fillColor: "#eee",
+		opacity: 0.8,
+		fillOpacity: 0.1
+	}
+}).addTo(map);
 
 L.geoJson(data, {
     pointToLayer: function (feature, latlng) {
