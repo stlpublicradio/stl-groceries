@@ -104,6 +104,9 @@ L.geoJson(data, {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     },
     style: function(feature) {
+	if (feature.properties.grocery_storeys == 'Schnucks Kossuth') {
+	return{radius: "12",fillColor: "#cc203b"}
+	}
             switch (feature.properties.field_4) {
                 case 'Other': return {fillColor: "#aaa"};
                 case 'Schnucks':   return {fillColor: "#cc203b"};
