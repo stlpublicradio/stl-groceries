@@ -73,7 +73,7 @@ var northEast = L.latLng(38.774, -90.074),
     southWest = L.latLng(38.464, -90.479),
     bounds = L.latLngBounds(southWest, northEast);
 
-var map = L.map('map', {scrollWheelZoom: false, attribution: ''}).setView([38.639, -90.254], 12).setMaxBounds(bounds);
+var map = L.map('map', {scrollWheelZoom: false, attribution: ''}).setView([38.639, -90.254], 11).setMaxBounds(bounds);
 
 var tiles = L.mapbox.tileLayer('stlpr.hi06d4b5')
     .addTo(map);
